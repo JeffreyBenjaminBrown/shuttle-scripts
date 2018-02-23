@@ -15,6 +15,6 @@ printf "\nWhat folder to mount? (Default: $default_folder.)\n"
 read folder
 folder=${folder:-$default_folder}
 
-sudo docker run --name $name -it -v /home/jeff/Encfs/kb-not-encfs:/mnt/smsn-data -p $port:8182 -d -h 127.0.0.1 jeffreybbrown/smsn-develop:2017-11-24
+sudo docker run --name $name -it -v $folder:/mnt/smsn-data -p $port:8182 -d -h 127.0.0.1 jeffreybbrown/smsn-develop:2017-11-24
 
 sudo docker exec -it $name bash
