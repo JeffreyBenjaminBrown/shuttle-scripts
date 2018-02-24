@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo docker stop smsn
-echo "running docker processes:"
+printf "\nrunning docker processes:"
 sudo docker ps
-echo "all docker processes:"
+printf "\nall docker processes:"
 sudo docker ps -a
